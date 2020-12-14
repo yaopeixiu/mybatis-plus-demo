@@ -1,0 +1,60 @@
+server:
+  port: 8099
+
+#多环境配置文件激活
+#spring:
+#  profiles:
+#    active: dev
+
+spring:
+  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.101.213.106:3306/mybatis_plus_demo?useUnicode=true&characterEncoding=UTF-8
+    username: test
+    password: qweasd
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    数据库连接池，维护一定数量的数据库连接，避免了频繁的连接，释放引起的性能消耗
+#    type: com.alibaba.druid.pool.DruidDataSource
+  data:
+    mongodb:
+      uri: mongodb://admin:123456@127.0.0.1:27017/testdb
+
+  #  redis缓存
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+#      连接池设置
+    lettuce:
+      pool:
+#        最大连接数
+        max-active: 8
+#        连接池中最大空闲连接
+        max-idle: 8
+#          连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1
+#          连接池中最小空闲连接
+        min-idle: 0
+#        连接超时时间（秒）
+    timeout: 3000s
+#        连接超时时间（毫秒）
+#    timeout: 3000
+
+#mybatis-plus相关配置
+mybatis-plus:
+#  xml扫描，多个目录用逗号或者分号分隔
+  mapper-locations: classpath*:mapper/**/*.xml
+
+#  一下配置均有默认值，可以不设置
+  global-config:
+    db-config:
+#      主键类型
+      id-type:
+
+  configuration:
+#    是否开启自动驼峰命名规则映射：从数据库列名到实体属性命名的映射
+    map-underscore-to-camel-case: true
+#    如果查询结果中包含空值的列，则mybatis在映射的时候不会映射这个字段
+#    call-setters-on-nulls: true
+#    这个配置会将执行的sql打印出来，开发或测试时可以用
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
