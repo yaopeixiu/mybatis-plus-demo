@@ -1,16 +1,12 @@
 package com.ypx.mybatisplusdemo.controller;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.google.common.collect.ImmutableMap;
-import com.ypx.mybatisplusdemo.Utils.PageUtils;
 import com.ypx.mybatisplusdemo.constant.MongoConstant;
 import com.ypx.mybatisplusdemo.entity.BaseInfo;
 import com.ypx.mybatisplusdemo.entity.mongo.Testdb;
 import com.ypx.mybatisplusdemo.service.SimpleMongoService;
 import com.ypx.mybatisplusdemo.vo.ApiResult;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;

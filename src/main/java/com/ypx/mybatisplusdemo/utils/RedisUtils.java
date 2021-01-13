@@ -1,4 +1,4 @@
-package com.ypx.mybatisplusdemo.Utils;
+package com.ypx.mybatisplusdemo.utils;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

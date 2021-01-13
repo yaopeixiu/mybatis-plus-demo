@@ -1,4 +1,4 @@
-package com.ypx.mybatisplusdemo.Utils;
+package com.ypx.mybatisplusdemo.utils;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 
