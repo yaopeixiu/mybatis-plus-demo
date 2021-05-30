@@ -36,6 +36,14 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.4.0</version>
         </dependency>
+
+        <!--springboot热部署-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
         <!--mysql数据库驱动-->
         <dependency>
             <groupId>mysql</groupId>
